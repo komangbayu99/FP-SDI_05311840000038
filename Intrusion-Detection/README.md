@@ -22,14 +22,14 @@ sistem perangkat lunak yang, berdasarkan analisis video otomatis, dapat mendetek
 
 Untuk setiap frame video, program menyediakan yang berikut ini:
 
-• Nomor frame
-• Jumlah objek (penyusup) yang terdeteksi
+- Nomor frame
+- Jumlah objek (penyusup) yang terdeteksi
 
 Untuk setiap objek:
 
-  o Area
-  o Perimeter
-  o Klasifikasi (orang, Benda mati(objek))
+- Area
+- Perimeter
+- Klasifikasi (orang, Benda mati(objek))
 
 Semua fitur ini diberikan sebagai output file teks.
 

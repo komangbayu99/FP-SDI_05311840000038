@@ -1,38 +1,37 @@
-# INTRUSION DETECTION SOFTWARE
+# Software Deteksi Intrusi
 
 <hr>
 
 
-## Libraries Used
+## Libraries Yang Dihubngkan
 
 - Numpy
 - cv2
 
-## How to Run
+## Bagaimana Cara Menjalankannya
 
-run the file Change detection.py to see how it works on the video example.
+jalankan file Change detection.py untuk melihat cara kerjanya pada contoh video
 
-## Description
+## Deskripsi
 
-software system that, based on automatic video analysis, can detect objects (intruders) that do not belong to a static reference scene (background) and establish which of such objects are persons.
-
+sistem perangkat lunak yang, berdasarkan analisis video otomatis, dapat mendeteksi objek (penyusup) yang tidak termasuk dalam adegan referensi statis (latar belakang) dan menentukan objek mana yang merupakan orang.
 
 
 ![image](https://user-images.githubusercontent.com/56583448/90742914-de113a00-e2cf-11ea-8c91-fd3e114d277b.png)
 
 
-For each video frame, the program provides the following:
+Untuk setiap frame video, program menyediakan yang berikut ini:
 
-• Frame number
-• Number of objects (intruders) detected
+• Nomor frame
+• Jumlah objek (penyusup) yang terdeteksi
 
-For each object:
+Untuk setiap objek:
 
   o Area
   o Perimeter
-  o Classification (person, true object or false object)
+  o Klasifikasi (orang, Benda mati(objek))
 
-All these features are given as a text file output.
+Semua fitur ini diberikan sebagai output file teks.
 
 
 

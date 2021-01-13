@@ -3,7 +3,7 @@
 <hr>
 
 
-## Libraries Yang Dihubngkan
+## Libraries Yang Digunakan
 
 - Numpy
 - cv2

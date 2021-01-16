@@ -37,38 +37,30 @@ import sys
 import requests
 ``
 - Download terlebih dahulu Libraries yang akan dipakai yang berada diatas di CMD ( Command Prompt )
-``
-#np.set_printoptions(threshold=sys.maxsize)
 
-#Membuka video dengan opencv
+``#np.set_printoptions(threshold=sys.maxsize)
+
 cap=cv2.VideoCapture('footage.mp4')
 ``
 - Pada variable cap akan Memanggil Library cv2 untuk mengimport/mengkoneksikan video ke kodingan 
 
-``
-framecount = 1
+``framecount = 1
 ``
 
 - Fungsi framecount ini adalah untuk memberikan notifikasi kepada Bot Telegram setiap 50/1 Frame sekali biar tidak terlalu ngespam
 
-``
-def telesend(text):
+``def telesend(text):
     url = "https://api.telegram.org/bot1590527198:AAGoYnQCFKi-Gi6ldLK5WsIHlfom6Yr1odU/sendMessage?chat_id=1265603130&parse_mode=Markdown&text=" + text
     requests.get(url)
 ``
 
 - Diatas ini adalah kodingan untuk mengkoneksikan antara Bot Telegram dengan Kodingan projek ini
 
-``
-#initialize a dictionary used to store the frames for then computing a background update
-#Menyimpan Frame untuk background update
-dict_frame={}``
+``dict_frame={}``
 
 - Untuk Menyimpan Frame untuk Background update
 
-``
-#background computed on the first 50 frames
-for s in range(0,50):
+``for s in range(0,50):
     cap.set(cv2.CAP_PROP_POS_FRAMES, s)
     _, frame = cap.read()
     frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
@@ -78,34 +70,26 @@ for i in range(0, 50):``
 
 - Ini Untuk menyimpan 50 frame pertama yang udah dianalisa
 
-``
-    frames.append(dict_frame[i])
+`` frames.append(dict_frame[i])
 medianFrame = np.median(frames, axis=0).astype(dtype=np.uint8)
 
 
-## Display background
 cv2.imshow('frame', medianFrame)
 
-#cv2.waitKey(0)
+cv2.waitKey(0)
 
-
-# set actual frame to the first frame after median
 cap.set(cv2.CAP_PROP_POS_FRAMES, 49)
-
 ``
 - Di section berfungsi untuk menunggu hasil analisa
 
-``
-#text output file
-Textout = dict.fromkeys(['frame','n_objects','object','Area','Perimeter','Classification'])
+``Textout = dict.fromkeys(['frame','n_objects','object','Area','Perimeter','Classification'])
 text_file = open("Output.txt", "w")
 text_file.write("Output\n")
 text_file.close()
 ``
 - Hasil output talah keluar berupa Frame, Object< Area, Perimeter, dan juga Klasifikasinya 
 
-``
-ret = True
+``ret = True
 
 while (ret):
     # Read frame

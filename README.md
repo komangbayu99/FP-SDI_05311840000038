@@ -30,13 +30,11 @@ Python3,numpy, opencv 2.
 
 ## Code Program
 
-``
-import numpy as np
+``import numpy as np
 import cv2
 import copy
 import sys
 import requests
-
 ``
 - Download terlebih dahulu Libraries yang akan dipakai yang berada diatas di CMD ( Command Prompt )
 ``
